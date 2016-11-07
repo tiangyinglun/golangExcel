@@ -1,0 +1,120 @@
+1.雷达数据库 登陆用户名 密码
+user:admin
+pass:admin123
+
+DB_HOST_WRITE=10.111.32.156
+DB_DATABASE=ana-test
+DB_USERNAME=geoana
+DB_PASSWORD=123456
+
+2.获取公共文件 
+git submodule update --init
+
+3.查看分支
+git branch -r
+4.下载分支
+ git checkout -b feature/PD-314 origin/feature/PD-314
+                 //本地分支名称 //线上分支名称 
+
+ git checkout -b feature/PD-441 origin/online
+数据交换规则
+在以前的贷中目录再新建个目录，存放营销的目录，比如叫：marketing
+marketing/project/1/detail.txt 				#表示id为1的项目明细，格式见附件
+marketing/project/1/xxx 					#表示为这个项目上传的附件，格式有word、ppt、pdf、rar
+marketing/clues/20160510/1.txt			#表示id为1的项目，在20160510产生的数据
+marketing/feedback/1/20160510/201605101652.xls	#表示id为1的项目，为20160510这期的数据，做的反馈；可以上传多次，因此文件名是到年月日时分组成的
+                 
+ git checkout -b feature/PD-481 origin/feature/PD-480
+ git checkout -b feature/PD-440 origin/online
+                 
+5.更新自动加载文件
+composer dump-autoload
+ 
+ssh-keygen  -t rsa  "tianyinglun@geotmt.com"  –C
+
+ssh-keygen -t rsa -C “haiyan.xu.vip@gmail.com”
+
+
+market_template_effect
+
+php artisan module:make-migration create_table_market_template_effect Marketing
+
+
+//生成数据库
+php artisan module:migrate
+
+//创建模块
+php artisan module:make-model TemplateEffect Marketing  --fillable="user_id,project_id,template_char,method"
+
+php artisan module:make-model MarketTemplate Marketing
+php artisan module:make-model MarketProject Marketing
+
+//指定队列 监听
+php artisan queue:listen --queue=email_queue
+
+更新 ide_heper
+php artisan ide-helper:generate
+
+
+
+
+ 
+密码重置请求
+A request has been received to reset your password.
+If you follow the link below you will be able to personally reset your password. 
+http://jira.geotmt.com/secure/ResetPassword!default.jspa?os_username=tianyinglun&token=090ff220e48f2ae98c9ea9d6149f3bcbaa68408e
+This password reset request is valid for the next 24 hours. 
+Don't worry you can always ask for a new password using the following link: 
+http://jira.geotmt.com/secure/ForgotLoginDetails.jspa?username=tianyinglun
+以下是您的账户信息:
+用户名:	tianyinglun
+邮件:	tianyinglun@geotmt.com
+全称:	田英伦
+
+
+堡垒机账号：tianyinglun
+
+堡垒机密码：10mM!-uf--->   tian!@#4
+
+chrome://net-internals/#dns 
+
+
+分支详情
+ana  349 营销最开始的
+440 后期修改的
+441 缓存 上传反馈信息的  宜信api 接口
+445 线上新拉取的分支
+
+
+114.113.66.48
+ api.geotmt.com  ana.geotmt.com   mp.geotmt.com
+
+http://jenkins.geotmt.com/view/online/
+http://jenkins.geotmt.com/view/web3/
+
+
+vender 有更新老显示  git checkout ./ 
+
+
+、**
+
+ftp :10.111.23.230
+username :ftpadmin/ftpadmins
+password :12345678
+
+cp -R aaa  bbb  合并文件夹的文件
+
+
+http://api.geotmt.com/jump?url=http%3A%2F%2Fapi.geotmt.com%2Fedm%2Fshow%3Fpc%3Dhttp%3A%2F%2Fwww.10100000.com%2FMarket%2F2016%2F03%2F01%2Findex.html%3FWT.mc_id%3DCXX-GEOYDYMDHK-%26mobile%3Dhttp%3A%2F%2Fwww.10100000.com%2Fm%2FMarket%2F2016%2F03%2F03%2FnoMobileStep1.html%3FWT.mc_id%3DCXX-GEOYDYMDHK-&event=edm_pingan&do=12345@qq.com
+
+http://api.geotmt.com/jump?url=http%3A%2F%2Fapi.geotmt.com%2Fedm%2Fshow%3Fpc%3Dhttps%3A%2F%2Fe.cib.com.cn%2Fapp%2FquickApplyCard%2FquickApplyCard.do%3Fofflcode%3D1480%26procode%3DF1409010%26sourceSite%3D1409%26typeCode%3Dyinlianbiaozhun%26mobile%3Dhttps%3A%2F%2Fccshop.cib.com.cn%3A8010%2Fapplication%2Fcardapp%2FFast%2FTwoBar%2Fview%3Fid%3Ddaade908bf2f42d2a139708c0aa31dc2&event=edm_xingye&do=12345@qq.com
+
+
+
+
+
+
+
+
+
+vpn 114.113.66.34

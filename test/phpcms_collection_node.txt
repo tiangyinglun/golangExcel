@@ -1,0 +1,36 @@
+ type PhpcmsCollectionNode struct{ 
+ UrlEnd string `json:"url_end"`
+TimeHtmlRule string `json:"time_html_rule"`
+ContentNextpage string `json:"content_nextpage"`
+UrlContain string `json:"url_contain"`
+TitleRule string `json:"title_rule"`
+TitleHtmlRule string `json:"title_html_rule"`
+ContentPageEnd string `json:"content_page_end"`
+ContentPageRule int `json:"content_page_rule"`
+Sourcecharset string `json:"sourcecharset"`
+Urlpage string `json:"urlpage"`
+ParNum int `json:"par_num"`
+ContentPage int `json:"content_page"`
+ComeformHtmlRule string `json:"comeform_html_rule"`
+ContentHtmlRule string `json:"content_html_rule"`
+DownAttachment int `json:"down_attachment"`
+Siteid int `json:"siteid"`
+PagesizeEnd int `json:"pagesize_end"`
+AuthorRule string `json:"author_rule"`
+UrlStart string `json:"url_start"`
+ComeformRule string `json:"comeform_rule"`
+ContentRule string `json:"content_rule"`
+CollOrder int `json:"coll_order"`
+PagesizeStart int `json:"pagesize_start"`
+PageBase string `json:"page_base"`
+AuthorHtmlRule string `json:"author_html_rule"`
+TimeRule string `json:"time_rule"`
+Watermark int `json:"watermark"`
+Nodeid int `json:"nodeid"`
+Lastdate int `json:"lastdate"`
+Sourcetype int `json:"sourcetype"`
+Name string `json:"name"`
+UrlExcept string `json:"url_except"`
+ContentPageStart string `json:"content_page_start"`
+CustomizeConfig string `json:"customize_config"`
+}

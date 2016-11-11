@@ -38,7 +38,7 @@ func main() {
 
 	// for i := 0; i < 10; i++ {
 	paramMap := make(map[string]string)
-	paramMap["path"] = "E:/gows/src/Thrift/server/20160308170871.xlsx"
+	paramMap["path"] = "E:/gows/src/Thrift/server/123456122334.xlsx"
 	paramMap["type"] = "json"
 
 	r1, _ := client.CallBack(time.Now().Unix(), 1, paramMap)

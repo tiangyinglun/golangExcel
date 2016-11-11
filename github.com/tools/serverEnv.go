@@ -2,6 +2,8 @@ package tools
 
 import (
 	"os"
+	"os/exec"
+	"path/filepath"
 	"runtime"
 )
 
@@ -12,5 +14,6 @@ func GetOs() string {
 
 //获取程序路径
 func GetPath() string {
-	return os.Getenv("PWD")
+	file, _ := exec.LookPath(os.Args[0])
+	return filepath.Dir(file)
 }

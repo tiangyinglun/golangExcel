@@ -2,6 +2,7 @@ package tools
 
 import (
 	"bufio"
+	"fmt"
 	"io"
 	"os"
 	"strings"
@@ -102,17 +103,15 @@ func (c Config) Read(node, key string) string {
 //读取内容
 func ReadValue(category, name string) string {
 	myConfig := new(Config)
-	fileName := "./config.ini"
-	fileName2 := "/opt/nginx_ana_prepare/www/gbfs/config.ini"
-	fileName3 := "/usr/local/nginx/www/gbfs/config.ini"
+	fileDirname := GetPath()
+	fileName := fileDirname + "/config.ini"
+	fmt.Println(GetPath())
+	filename2 := "./config.ini"
 	if fileExist(fileName) {
 		myConfig.InitConfig(fileName)
 		return myConfig.Read(category, name)
-	} else if fileExist(fileName2) {
-		myConfig.InitConfig(fileName2)
-		return myConfig.Read(category, name)
-	} else if fileExist(fileName3) {
-		myConfig.InitConfig(fileName3)
+	} else if fileExist(filename2) {
+		myConfig.InitConfig(filename2)
 		return myConfig.Read(category, name)
 	} else {
 		return ""

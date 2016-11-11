@@ -18,7 +18,8 @@ type batuThrift struct {
 //请求返回
 func (this *batuThrift) CallBack(callTime int64, types int32, paramMap map[string]string) (ret string, err error) {
 	//请求数据dataRet
-	ret, err = tools.HandleData(types, paramMap)
+	c := &tools.CallBack{make(map[string]interface{})}
+	ret, err = tools.HandleData(types, paramMap, c)
 	if err != nil {
 		fmt.Println(err)
 	}

@@ -143,11 +143,11 @@ func CallbackCheck(paramMap map[string]string, c *CallBack) (ret string, err err
 		//循环阶段
 		for _, v := range subBox {
 			//如果长多小于v 并且iszero true 就跳过
-			if dataLen < v && iszero {
+			if dataLen < v {
 				continue
 			}
 			//如果长度小于下标 并且 还没有结束 就报错 长度小于 1 也报错 //如果下标和长度相等 并且不是结尾 就报错
-			if (dataLen < v && !iszero) || dataLen <= 1 || dataLen == v && len(subBox) != v {
+			if (dataLen == v && !iszero && data[v]!="") || dataLen <= 1 || dataLen == v && len(subBox) != v {
 				m["level"] = "1"
 				c.RBack[errLine] = m
 				break

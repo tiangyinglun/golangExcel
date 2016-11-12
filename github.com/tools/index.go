@@ -141,17 +141,28 @@ func CallbackCheck(paramMap map[string]string, c *CallBack) (ret string, err err
 		var iszero bool = false
 		dataLen := len(data)
 		//循环阶段
-		for _, v := range subBox {
-			//如果长多小于v 并且iszero true 就跳过
-			if dataLen < v {
-				continue
-			}
-			//如果长度小于下标 并且 还没有结束 就报错 长度小于 1 也报错 //如果下标和长度相等 并且不是结尾 就报错
-			if (dataLen == v && !iszero && data[v]!="") || dataLen <= 1 || dataLen == v && len(subBox) != v {
+		for k, v := range subBox {
+             //如果长度小于第一个下标 跳出循环
+			if dataLen<v&&k==0{
 				m["level"] = "1"
 				c.RBack[errLine] = m
 				break
 			}
+			//如果长多小于v 就代表阶段要结束
+			if dataLen < v {
+				break
+			}
+
+			//如果长度和v相等 已经结束 后面不为空|| 如果 内容为空 并且没有结束 
+			if (dataLen == v && !iszero && data[v]!="") || data[v]==""&& iszero{
+				m["level"] = "1"
+				c.RBack[errLine] = m
+				break
+			}
+			//如果最后一个 为空 跳出 并且结束了 就跳出
+           if dataLen==v&&data[v]==""&&!iszero {
+           	continue
+           }
 			dataV := data[v]
 			//转成数字32 位
 			value, err := strconv.Atoi(data[v])
@@ -178,8 +189,10 @@ func CallbackCheck(paramMap map[string]string, c *CallBack) (ret string, err err
 			if dataV != "0" {
 				iszero = true
 			}
-		}
+		} 
+
 	}
+
 	ret, err = c.RanderJson()
 	return
 

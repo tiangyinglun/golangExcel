@@ -152,17 +152,17 @@ func CallbackCheck(paramMap map[string]string, c *CallBack) (ret string, err err
 			if dataLen < v {
 				break
 			}
-
-			//如果长度和v相等 已经结束 后面不为空|| 如果 内容为空 并且没有结束 
-			if (dataLen == v && !iszero && data[v]!="") || data[v]==""&& iszero{
+	       //如果最后一个 为空 跳出 并且结束了 就跳出
+           if dataLen==v&&data[v]==""&&iszero {
+           	    continue
+           }
+			//已经结束 后面不为空|| 如果 内容为空 并且没有结束 
+			if ( iszero && data[v]!="") || data[v]==""&& !iszero{
 				m["level"] = "1"
 				c.RBack[errLine] = m
 				break
 			}
-			//如果最后一个 为空 跳出 并且结束了 就跳出
-           if dataLen==v&&data[v]==""&&!iszero {
-           	continue
-           }
+		
 			dataV := data[v]
 			//转成数字32 位
 			value, err := strconv.Atoi(data[v])

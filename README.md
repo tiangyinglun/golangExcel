@@ -5,7 +5,8 @@
 1)改服务是利用thrift rpc宽肩实现，可以使用php调用golang服务去解析大型xlsx格式文件
 ，phpexcel由于性能问题不能解析生成很大的xlsx文件，所以才这样实现
 
-2.配置文件 config.ini
+
+=====2.配置文件 config.ini=====
 
 [addr]
 
@@ -29,8 +30,9 @@ filepath =E:/gows/src/Thrift/server/
 
 path=E:/gows/src/Thrift/server/
 
-3.调用方法：
-1）php调用解析xlsx 格式文件文件夹 phpThriftdemo/demo.php
+=====3.调用方法：=====
+
+1）php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php   文件
 
 //php调用把文件或者json生成xlsx格式文件 开始
 

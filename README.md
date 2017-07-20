@@ -30,11 +30,7 @@ filepath =E:/gows/src/Thrift/server/
 
 path=E:/gows/src/Thrift/server/
 
-# 3.调用方法： 
-
-1）php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php   文件
-
-
+# 3.调用方法： php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php 
 
 //---------------php调用把文件或者json生成xlsx格式文件 开始--------------------------
 

@@ -32,6 +32,16 @@ path=E:/gows/src/Thrift/server/
 
 # 3.调用方法： php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php 
 
+ # 解析xlsx文件
+
+$item=array();
+
+$item["path"]= "E:/gows/src/Thrift/server/demo.xlsx"; //文件地址
+
+$item["type"]= "json";//返回形式 type=json 就是以json格式返回（建议不要用如果xlsx文件很大有可能内存溢出），type=path 就是返货 xxx.txt文件  把xlsx解析成txt并返回路径 数据以 \n换行 \t分割
+
+
+
 # 生成xlsx
 //---------------php调用把文件或者json生成xlsx格式文件 开始--------------------------
 // $item = array();
@@ -42,13 +52,6 @@ path=E:/gows/src/Thrift/server/
 
 // $item["json"] ='[["电话","idfa","ema","银行内部","世界你好","自由自在"],["17782277993","","","1","2",""],["18055108397","","","1","3",""],,["18981961715","","","","",""]]';
  
- # 解析xlsx文件
-
-$item=array();
-
-$item["path"]= "E:/gows/src/Thrift/server/demo.xlsx";
-
-$item["type"]= "json";//返回形式 type=json 就是以json格式返回（建议不要用如果xlsx文件很大有可能内存溢出），type=path 就是返货 xxx.txt文件  把xlsx解析成txt并返回路径 数据以 \n换行 \t分割
 
 # 调用方式
 

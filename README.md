@@ -32,8 +32,8 @@ path=E:/gows/src/Thrift/server/
 
 # 3.调用方法： php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php 
 
+# 生成xlsx
 //---------------php调用把文件或者json生成xlsx格式文件 开始--------------------------
-
 // $item = array();
 
 // $item["path"] = "E:/gows/src/Thrift/server/272bb94d-1335-480b-be3c-81643a31a0e1-1499911449301.txt";
@@ -41,10 +41,8 @@ path=E:/gows/src/Thrift/server/
 // $item["type"] = "path"; //如果type=path就是传入txt文件去解析成excel txt格式必须 以制表符 "\t" 分割 \n 结尾  例如：83328838666    80200800400|0.3 -   -   打车租车
 
 // $item["json"] ='[["电话","idfa","ema","银行内部","世界你好","自由自在"],["17782277993","","","1","2",""],["18055108397","","","1","3",""],,["18981961715","","","","",""]]';
-
-//---------------php调用把文件或者json生成xlsx格式文件 结束--------------------------
  
-//---------------解析xlsx参数 ---开始---------------
+ # 解析xlsx文件
 
 $item=array();
 
@@ -52,8 +50,7 @@ $item["path"]= "E:/gows/src/Thrift/server/demo.xlsx";
 
 $item["type"]= "json";//返回形式 type=json 就是以json格式返回（建议不要用如果xlsx文件很大有可能内存溢出），type=path 就是返货 xxx.txt文件  把xlsx解析成txt并返回路径 数据以 \n换行 \t分割
 
-//---------------解析xlsx参数 ---结束---------------
-
+# 调用方式
 
 $ThrifClient = new ThrifClient();
 
@@ -63,14 +60,8 @@ $type=1; //如果type=2代表要生成 xlsx文件  type=1解析xlsx 文件
 
 $res = $ThrifClient->SocketT($type, $item);
 
-echo $res;
 
-$resArr = json_decode($res, true);
-
-print_r($resArr);
-
-
-返回值：
+# 返回值：
 
 {"detail":"E:\\gows\\src\\ThriftExcel/31666e37d87b3490a2c471edc1d1d07c.xlsx","message":"返回成功","status":0}
 

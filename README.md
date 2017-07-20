@@ -6,7 +6,7 @@
 ，phpexcel由于性能问题不能解析生成很大的xlsx文件，所以才这样实现
 
 
-=====2.配置文件 config.ini=====
+# 2.配置文件 config.ini
 
 [addr]
 
@@ -30,7 +30,7 @@ filepath =E:/gows/src/Thrift/server/
 
 path=E:/gows/src/Thrift/server/
 
-=====3.调用方法：=====
+# 3.调用方法： 
 
 1）php调用解析xlsx 格式文件 见文件夹 phpThriftdemo/demo.php   文件
 
@@ -87,7 +87,7 @@ Array
     [status] => 0
 )
 
-4.启动服务  可执行文件在目录里面
+# 4.启动服务  可执行文件在目录里面
 
 1)如果linix
 
